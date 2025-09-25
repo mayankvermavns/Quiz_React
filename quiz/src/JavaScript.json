@@ -1,0 +1,92 @@
+[
+    {
+        "qno": 1,
+        "question": "What is the full form of JSON ?",
+        "a": "Java Syntax Object Notation",
+        "b": "Java Script Object Notation",
+        "c": "Java Source Open Notation",
+        "d": "Java Standard Object Node",
+        "correct": "Java Script Object Notation"
+    },
+    {
+        "qno": 2,
+        "question": "Which company developed JavaScript ?",
+        "a": "Microsoft",
+        "b": "Netscape",
+        "c": "Sun Microsystem",
+        "d": "IBM",
+        "correct": "Netscape"
+    },
+    {
+        "qno": 3,
+        "question": "Which symbol is used for comments in JavaScript (single-line) ?",
+        "a": "<!-- -->",
+        "b": "//",
+        "c": "#",
+        "d": "/*  */",
+        "correct": "//"
+    },
+    {
+        "qno": 4,
+        "question": "Which keyword is uesd to declare a variable in JavaScript(ES6) ?",
+        "a": "var",
+        "b": "let",
+        "c": "const",
+        "d": "All of the above",
+        "correct": "All of the above"
+    },
+    {
+        "qno": 5,
+        "question": "What is the default value of an uninitialized variable in JavaScript",
+        "a": 0,
+        "b": "null",
+        "c": "undefined",
+        "d": "false",
+        "correct": "undefined"
+    },
+    {
+        "qno": 6,
+        "question": "Whic of the following is not a JavaScript data type ?",
+        "a": "Number",
+        "b": "String",
+        "c": "Boolean",
+        "d": "Character",
+        "correct": "Character"
+    },
+    {
+        "qno": 7,
+        "question": "What does typeof null return in JavaScript ?",
+        "a": "null",
+        "b": "object",
+        "c": "undefined",
+        "d": "string",
+        "correct": "object"
+    },
+    {
+        "qno": 8,
+        "question": "Which operator is used for strict equality comparision ?",
+        "a": "==",
+        "b": "===",
+        "c": "=",
+        "d": "!==",
+        "correct": "==="
+    },
+    {
+        "qno": 9,
+        "question": "Which function is used to print something in the console ?",
+        "a": "printf()",
+        "b": "console print()",
+        "c": "console.log()",
+        "d": "log.print()",
+        "correct": "console.log()"
+    },
+    {
+        "qno": 10,
+        "question": "JavaScript is a _________ launguage ?",
+        "a": "Compiled",
+        "b": "Interpreted",
+        "c": "Machine",
+        "d": "Markup",
+        "correct": "Interpreted"
+    }
+]
