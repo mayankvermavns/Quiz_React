@@ -1,0 +1,92 @@
+[
+    {
+        "qno": 1,
+        "question": "Which of the following is not a valid C data type?",
+        "a": "int",
+        "b": "float",
+        "c": "real",
+        "d": "char",
+        "correct": "real"
+    },
+    {
+        "qno": 2,
+        "question": "C language was developed at which place?",
+        "a": "Bell Labs",
+        "b": "Microsoft",
+        "c": "IBM",
+        "d": "Google",
+        "correct": "Bell Labs"
+    },
+    {
+        "qno": 3,
+        "question": "Which operator is used to get the remainder in C",
+        "a": "/",
+        "b": "//",
+        "c": "%",
+        "d": "mod",
+        "correct": "%"
+    },
+    {
+        "qno": 4,
+        "question": "Which of the following is an entry point of C program?",
+        "a": "start()",
+        "b": "main()",
+        "c": "run()",
+        "d": "begin()",
+        "correct": "main()"
+    },
+    {
+        "qno": 5,
+        "question": "Which format specifier is used to print float values?",
+        "a": "%f",
+        "b": "%d",
+        "c": "%c",
+        "d": "%lf",
+        "correct": "%f"
+    },
+    {
+        "qno": 6,
+        "question": "Which loop executes at least once?",
+        "a": "for loop",
+        "b": "while loop",
+        "c": "do-while loop",
+        "d": "switch",
+        "correct": "do-while loop"
+    },
+    {
+        "qno": 7,
+        "question": "Which function is used to read a single character in C ?",
+        "a": "scanf()",
+        "b": "getchar()",
+        "c": "gets()",
+        "d": "input()",
+        "correct": "getchar()"
+    },
+    {
+        "qno": 8,
+        "question": "Which symbole is used for ssingle line comments in C(C99 standard)?",
+        "a": "//",
+        "b": "/**/",
+        "c": "#",
+        "d": "--",
+        "correct": "//"
+    },
+    {
+        "qno": 9,
+        "question": "What is the default return type of a function in C (if not specified) ?",
+        "a": "int",
+        "b": "float",
+        "c": "void",
+        "d": "char",
+        "correct": "int"
+    },
+    {
+        "qno": 10,
+        "question": "Which header file is used for mathematical function like sqrt(),pow() ?",
+        "a": "<math.h>",
+        "b": "<stdio.h>",
+        "c": "<stdlib.h>",
+        "d": "<conio.h>",
+        "correct": "<math.h>"
+    }
+]
