@@ -5,7 +5,8 @@ function Api() {
   const [subjects, setSubjects] = useState([]);
   const [quizes, setQuizes] = useState([]);
   const [showquiz, setShowQuiz] = useState(false);
-  const [submitted, setSubmitted] = useState({}); 
+  const [submitted, setSubmitted] = useState({});
+  const [answers, setAnswers] = useState({}); 
 
   //  *********** Load Subject From JSON *************
   const loadSubjects = () => {
@@ -28,10 +29,16 @@ function Api() {
         setQuizes(response.data);
         setShowQuiz(true);
         setSubmitted({});
+        setAnswers({}); // reset answers
       })
       .catch((error) => {
         console.log("Error in Quiz API", error);
       });
+  };
+
+  // ********** Handle Option Change ***********
+  const handleOptionChange = (index, value) => {
+    setAnswers((prev) => ({ ...prev, [index]: value }));
   };
 
   // ********** Handle Submit ***********
@@ -45,7 +52,6 @@ function Api() {
       <button onClick={loadSubjects}>Load Subjects</button>
 
       {/* Subject List */}
-
       {subjects.length > 0 && (
         <div style={{ marginTop: "20px" }}>
           <h2>Subjects List</h2>
@@ -60,7 +66,6 @@ function Api() {
       )}
 
       {/* Quiz Question */}
-
       {showquiz && quizes.length > 0 && (
         <div style={{ marginTop: "20px" }}>
           <h2>Quiz Questions</h2>
@@ -80,25 +85,53 @@ function Api() {
 
               <div>
                 <label>
-                  <input type="radio" name={`q${index}`} value="a" /> a) {Q.a}
+                  <input
+                    type="radio"
+                    name={`q${index}`}
+                    value="a"
+                    onChange={() => handleOptionChange(index, Q.a)}
+                    disabled={submitted[index]}
+                  />{" "}
+                  a) {Q.a}
                 </label>
               </div>
 
               <div>
                 <label>
-                  <input type="radio" name={`q${index}`} value="b" /> b) {Q.b}
+                  <input
+                    type="radio"
+                    name={`q${index}`}
+                    value="b"
+                    onChange={() => handleOptionChange(index, Q.b)}
+                    disabled={submitted[index]}
+                  />{" "}
+                  b) {Q.b}
                 </label>
               </div>
 
               <div>
                 <label>
-                  <input type="radio" name={`q${index}`} value="c" /> c) {Q.c}
+                  <input
+                    type="radio"
+                    name={`q${index}`}
+                    value="c"
+                    onChange={() => handleOptionChange(index, Q.c)}
+                    disabled={submitted[index]}
+                  />{" "}
+                  c) {Q.c}
                 </label>
               </div>
 
               <div>
                 <label>
-                  <input type="radio" name={`q${index}`} value="d" /> d) {Q.d}
+                  <input
+                    type="radio"
+                    name={`q${index}`}
+                    value="d"
+                    onChange={() => handleOptionChange(index, Q.d)}
+                    disabled={submitted[index]}
+                  />{" "}
+                  d) {Q.d}
                 </label>
               </div>
 
@@ -112,9 +145,19 @@ function Api() {
               )}
 
               {submitted[index] && (
-                <p style={{ color: "green", marginTop: "5px" }}>
-                  <b>Correct Answer:</b> {Q.correct}
-                </p>
+                <>
+                  {answers[index] === Q.correct ? (
+                    <p style={{ color: "green", marginTop: "5px" }}>
+                      ✅ Your answer is correct <br />
+                      You selected: <b>{answers[index]}</b>
+                    </p>
+                  ) : (
+                    <p>
+                      You selected: <b>{answers[index]}</b> <br />
+                      ✔ Correct answer is: <b>{Q.correct}</b>
+                    </p>
+                  )}
+                </>
               )}
             </div>
           ))}
